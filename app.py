@@ -18,7 +18,7 @@ from database import init_db, get_db_connection, log_mail
 
 # --- Configuration ---
 ***REMOVED***
-SENDER_PASSWORD = "YOUR_APP_PASSWORD"
+***REMOVED***
 ***REMOVED***
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
