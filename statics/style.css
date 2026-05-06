@@ -1,0 +1,116 @@
+/* --- Global Theme & Colors (Deep Dark Mode) --- */
+:root {
+    /* Define color variables for easy modification */
+    --primary-bg: #1e2430; /* Main deep blue-black background (like the image) */
+    --card-bg: #2b3342; /* Slightly lighter card background */
+    --border-color: #444b5a;
+    --text-color: #e0e0e0;
+    --red-alert: #dc3545;
+    --yellow-warning: #ffc107;
+    --green-success: #28a745;
+    --blue-info: #007bff;
+}
+
+/* Apply base styles to the body */
+body.dark-theme {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll on resize */
+}
+
+/* --- Layout Components --- */
+.content-area {
+    padding: 20px;
+}
+
+/* --- Metric & Summary Cards (The look you wanted) --- */
+.metric-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 15px;
+    /* Soft shadow effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.metric-card h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+/* Color Overrides for Metrics - Using border colors for visual impact */
+.border-danger-custom { border-left: 5px solid var(--red-alert) !important; }
+.border-warning-custom { border-left: 5px solid var(--yellow-warning) !important; }
+.text-red-alert { color: var(--red-alert) !important; }
+.text-green-success { color: var(--green-success) !important; }
+
+
+/* --- Live Feed & Main Visualization --- */
+.live-feed-container {
+    background-color: #000;
+    padding: 5px;
+    border-radius: 12px;
+    /* Red border emphasizes the live, critical nature */
+    border: 3px solid var(--red-alert); 
+    overflow: hidden;
+}
+.live-feed-container img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh; 
+    display: block;
+    border-radius: 8px;
+}
+
+/* --- Log Table --- */
+.log-container {
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.log-table {
+    --bs-table-bg: var(--card-bg);
+    --bs-table-color: var(--text-color);
+    color: var(--text-color);
+    border-color: #3f475a;
+}
+
+/* Specific shading for alert rows */
+.bg-danger-subtle { 
+    background-color: rgba(220, 53, 69, 0.25) !important; 
+    color: var(--text-color) !important; 
+}
+.bg-warning-subtle { 
+    background-color: rgba(255, 193, 7, 0.2) !important; 
+    color: var(--text-color) !important; 
+}
+
+/* --- Map Container --- */
+.map-container {
+    height: 400px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+/* --- Icons and Utilities --- */
+.icon-sm { width: 16px; height: 16px; vertical-align: middle; }
+.icon-md { width: 20px; height: 20px; vertical-align: middle; }
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Login Modal styling */
+#loginModal .modal-content {
+    background-color: var(--card-bg);
+    border: 1px solid var(--red-alert);
+}
