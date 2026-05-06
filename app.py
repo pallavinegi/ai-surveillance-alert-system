@@ -18,7 +18,7 @@ from database import init_db, get_db_connection, log_mail
 
 # --- Configuration ---
 SENDER_EMAIL = "negipallu11@gmail.com"
-SENDER_PASSWORD = "YOUR_APP_PASSWORD"
+SENDER_PASSWORD = "hfiwkhdamztksatn"
 RECIPIENT_EMAIL = "pallavin167@gmail.com"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
