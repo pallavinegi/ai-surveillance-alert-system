@@ -1,0 +1,4 @@
+__pycache__/
+snapshots/
+known_faces/
+*.pyc
