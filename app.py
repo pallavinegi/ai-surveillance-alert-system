@@ -17,9 +17,9 @@ import numpy as np
 from database import init_db, get_db_connection, log_mail
 
 # --- Configuration ---
-***REMOVED***
-***REMOVED***
-***REMOVED***
+SENDER_EMAIL = "example1@gmail.com"
+SENDER_PASSWORD = "apppasswordofanymail"
+RECIPIENT_EMAIL = "example2@gmail.com"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
